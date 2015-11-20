@@ -41,9 +41,6 @@ public class Classic extends Activity {
     private int diff = 1, highScore = 0, compteurPops = 0, hauteurEcran = 0, largeurEcran = 0, nbVies = 3, largeurBallon = 0;
     private float speed;
 
-   // InterstitialAd mInterstitialAd;
-    AdView ban, banBas, banBelowTop, banAboveBottom;
-
     private boolean cestPerdu = false, afficherLaFenetreDeDialogueDeDefaite = true;
 
     private RelativeLayout rlMain = null;
@@ -66,19 +63,6 @@ public class Classic extends Activity {
         setContentView(R.layout.activity_game);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager. LayoutParams.FLAG_FULLSCREEN);//On cache la barre du haut
 
-        //For ads
-       // mInterstitialAd = new InterstitialAd(this);
-       // mInterstitialAd.setAdUnitId(getString(R.string.interstitial_id));
-        requestNewInterstitial();
-        //Bannières
-        //ban = new AdView(this);
-        //ban.setAdUnitId(getString(R.string.banniere_vue_fin));
-        ban = (AdView)findViewById(R.id.ban);
-        banBas = (AdView)findViewById(R.id.banBas);
-        banBelowTop = (AdView)findViewById(R.id.banbelowtop);
-        banAboveBottom = (AdView)findViewById(R.id.banabovebottom);
-
-        requestNewBanner();
 
         Display display = getWindowManager().getDefaultDisplay();//On obtient l'ecran via le gestionnaire de fenêtre
         Point size = new Point();
@@ -213,11 +197,6 @@ public class Classic extends Activity {
                                         afficherLaFenetreDeDialogueDeDefaite = false;
                                         cestPerdu = true;//Flemme de changer le nom de la variable
                                         writeScore();//Actualise les scores
-                                      /*  if(mInterstitialAd.isLoaded()) {
-                                            mInterstitialAd.show();
-                                        }*/
-                                        showBanners();
-
                                         LayoutInflater li =(LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                                         LinearLayout layout = (LinearLayout) li.inflate(getResources().getLayout(R.layout.popup_gameover), null);
 
@@ -247,8 +226,7 @@ public class Classic extends Activity {
                                                 Classic.this.finish();//Le click sur le bouton va virer la page de jeu
                                             }
                                         });
-                                        adb.show();
-                                        rlMain.bringChildToFront(ban);*/
+                                        adb.show();*/
                                     }
                                 }
                             });
@@ -298,11 +276,6 @@ public class Classic extends Activity {
 
                     if(cestPerdu && afficherLaFenetreDeDialogueDeDefaite){
                         writeScore();//On actualise les records
-                       /* if(mInterstitialAd.isLoaded()) {
-                            mInterstitialAd.show();
-                        }*/
-                        showBanners();
-
                         LayoutInflater li =(LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                         LinearLayout layout = (LinearLayout) li.inflate(getResources().getLayout(R.layout.popup_gameover), null);
 
@@ -331,8 +304,7 @@ public class Classic extends Activity {
                                 Classic.this.finish();//On enleve la page de jeu quand il clique sur ok
                             }
                         });
-                        adb.show();
-                        rlMain.bringChildToFront(ban);*/
+                        adb.show();*/
                     }else{
                         if(!cestPerdu) {//Tant qu'on a pas perdu
                             handler.postDelayed(this, (long) (800 / speed) + r.nextInt(300));//On relance le runnable tant que la partie n'est pas terminée
@@ -531,40 +503,6 @@ public class Classic extends Activity {
                 }
                 break;
         }
-    }
-
-    private void requestNewInterstitial() {
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("YOUR_DEVICE_HASH")
-                .build();
-
-        //mInterstitialAd.loadAd(adRequest);
-    }
-
-    private void requestNewBanner(){
-        AdRequest adRequest = new AdRequest.Builder().build();
-        ban.loadAd(adRequest);
-        ban.bringToFront();
-
-        AdRequest adRequestBas = new AdRequest.Builder().build();
-        banBas.loadAd(adRequestBas);
-        banBas.bringToFront();
-
-        AdRequest adRequestAlmostTop = new AdRequest.Builder().build();
-        banBelowTop.loadAd(adRequestAlmostTop);
-        banBelowTop.bringToFront();
-
-        AdRequest adRequestAlmostBottom = new AdRequest.Builder().build();
-        banAboveBottom.loadAd(adRequestAlmostBottom);
-        banAboveBottom.bringToFront();
-
-    }
-
-    private void showBanners(){
-        ban.setVisibility(View.VISIBLE);
-        banBas.setVisibility(View.VISIBLE);
-        banBelowTop.setVisibility(View.VISIBLE);
-        banAboveBottom.setVisibility(View.VISIBLE);
     }
 
     @Override
