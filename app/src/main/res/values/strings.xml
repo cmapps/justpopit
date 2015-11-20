@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Just Pop It</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="difficulty_key">DIFFICULTY</string>
+    <string name="high_score_key">HIGHSCORE</string>
+    <string name="score_file_name">scores.conf</string>
+
+    <string name="infos_appli_title">Informations sur l\'application</string>
+    <string name="infos_appli">App name : Just Pop It\nVersion : 2.2.1\nDeveloper : Charles Masson\nAlias : La Masse\nWebsite : http://www.cm-apps.com\n\n</string>
+    <string name="infos_rules_title">Règles du jeu</string>
+    <string name="infos_rules"><b><u>English</u></b> :\n
+        <u><i>Classic mode :</i></u>\n
+        The balloons are coming down your screen ; there are three kinds of them :\n
+        <u>White ones</u> : You must pop them before they reach the very bottom of the screen or you will lose one heart. Each time you pop a white balloon, you get +1 pop.\n
+        <u>Yellow ones</u> : You also have to pop them before they reach the bottom but when you pop one of them, the speed of every other balloon will be reinitialized, so you may breathe.\n
+        <u>Red ones</u> : Do not touch them ! Not even its little string below them.\n
+        <u>Blue ones</u> : Only one of them can fill your life bar. If one goes through, you will lose two hearts.\n\n
+        <u><i>Rush mode :</i></u>\n
+        More balloons, faster but only white ones.\n
+        Let your finger upon your screen and blow them with one shot\n\n\n
+        <b><u>French</u></b> :\n
+        <u><i>Mode classique :</i></u>\n
+        Les ballons descendent verticalement sur l\'écran ; il en existe trois sortes :\n
+        <u>Les blancs</u> : Vous devez les éclater avant qu\'ils atteignent le bas de l\'écran ou vous perdrez un coeur. A chaque fois que vous éclatez un ballon blanc, vous obtenez +1 pop.\n
+        <u>Les jaunes</u> : Vous devez également les éclater avant qu\'ils atteignent le bas.\n
+        Lorsque vous les éclatez, la vitesse de tous les autres ballons est réinitialisée, vous pourrez souffler un peu!\n
+        <u>Les rouges</u> : Vous ne devez pas y toucher! Laissez-les descendre tranquillement.\n
+        <u>Les bleus</u> : Touchez-en un pour récupérer vos coeurs. Si vous les laissez atteindre le bas, ils vous en feront perdre deux fois plus!\n\n
+        <u><i>Mode rush :</i></u>\n
+        Plus de ballons, ballons plus rapides mais que des blancs\n
+        Nouvel avantage : laissez le doigt appuyé sur l\'écran et balayez les ballons</string>
+
+    <string name="kikoulol"><b>kikou</b><br/>lol</string>
+
+    <string name="bouton_defaite">Back</string>
+
+    <string name="tv_title">Just pop it!</string>
+    <string name="b_new">Classic</string>
+    <string name="b_rush">Rush</string>
+    <string name="b_info">Infos</string>
+
+    <string name="tv_record_vide">High score : </string>
+    <string name="tv_score_vide">Pops : </string>
+    <string name="tv_pause">Pause</string>
+    <string name="tv_easy">Difficulty : Easy</string>
+    <string name="tv_regular">Difficulty : Regular</string>
+    <string name="tv_hard">Difficulty : Hard</string>
+    <string name="tv_nightmare">Difficulty : Nightmare</string>
+
+    <string name="shared_scores_easy">SHARED_PREFERENCES_SCORES_EASY</string>
+    <string name="shared_scores_regular">SHARED_PREFERENCES_SCORES_REGULAR</string>
+    <string name="shared_scores_hard">SHARED_PREFERENCES_SCORES_HARD</string>
+    <string name="shared_scores_nightmare">SHARED_PREFERENCES_SCORES_NIGHTMARE</string>
+
+    <string name="shared_scores_easy_rush">SHARED_PREFERENCES_SCORES_EASY_RUSH</string>
+    <string name="shared_scores_regular_rush">SHARED_PREFERENCES_SCORES_REGULAR_RUSH</string>
+    <string name="shared_scores_hard_rush">SHARED_PREFERENCES_SCORES_HARD_RUSH</string>
+    <string name="shared_scores_nightmare_rush">SHARED_PREFERENCES_SCORES_NIGHTMARE_RUSH</string>
+
+    <string name="interstitial_id">ca-app-pub-7906787048036179/6372446648</string>
+    <string name="banniere_vue_fin">ca-app-pub-7906787048036179/8428675448</string>
+    <string name="banniere_vue_fin_bas">ca-app-pub-7906787048036179/7641001445</string>
+    <string name="banniere_vue_fin_rush">ca-app-pub-7906787048036179/6114337443</string>
+    <string name="banniere_vue_fin_bas_rush">ca-app-pub-7906787048036179/7780602242</string>
+    <string name="banniere_accueil">ca-app-pub-7906787048036179/7172268242</string>
+
+</resources>
